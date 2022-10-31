@@ -1,0 +1,85 @@
+// @import '/wp-content/themes/portfolio_theme/style.scss';
+
+
+
+
+@mixin blur {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+@mixin shadow{
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+@mixin border-glass{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-Left: 1px solid rgba(255, 255, 255, 0.5);
+}
+@mixin border-full {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.t{
+
+
+    .row{
+        .col{
+            @include blur;
+            @include shadow;
+            @include border-glass;
+            position: relative;          
+            padding: 20px;
+            margin: 50px 50px;
+            min-width: 300px;
+            border-radius: 25px;
+            @media (max-width: 350px) {
+                min-width: none;
+            } 
+        }
+    }
+    .icon{
+        @include blur;
+        @include shadow;
+        @include border-glass;
+        height: 200px;
+        width: 45%;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding: 0px;
+        border-radius: 20px;
+        @media (max-width: 400px) {
+            width: 42%;
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 170px;
+            
+        }
+        @media (min-width: 767px) {
+            width: 27%;
+            margin-bottom: 10px;
+            
+        }  
+        @media (min-width: 991px) {
+            width: 15%;
+        }        
+        
+        .icon_color{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill: white;  
+            font-size: 150px;
+            color: white;
+           
+            }
+            
+        }
+        
+    }
